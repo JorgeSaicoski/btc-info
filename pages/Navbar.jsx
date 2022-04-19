@@ -70,7 +70,7 @@ function Navbar() {
           <Link href="/">
             <a>Dictionary</a>
           </Link>
-          <Link href="/">
+          <Link href="/advice/Advice">
             <a>Advices</a>
           </Link>
           <Link href="/">
