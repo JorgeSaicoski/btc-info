@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Listbox } from '@headlessui/react'
 import Navbar from "../Navbar"
-import {ArrowCircleLeftIcon, SelectorIcon} from '@heroicons/react/solid'
 import AdviceBody from "./AdviceBody"
 
 const option = [
@@ -20,7 +19,7 @@ function Advice() {
       <Navbar/>
       <div className="flex flex-col items-center justify-items-start mt-10 h-32 z-10">
         <Listbox value={selectedOption} onChange={setSelectedOption} >
-          <Listbox.Button className="border-2 rounded-2xl border-secondColor p-2 bg-extraColor w-full sm:w-1/3 flex flex-row justify-between items-center">{selectedOption.name}<SelectorIcon className="w-8"/></Listbox.Button>
+          <Listbox.Button className="border-2 rounded-2xl border-secondColor p-2 bg-extraColor w-full sm:w-1/3 flex flex-row justify-between items-center">{selectedOption.name}{/*<SelectorIcon className="w-8"/>*/}</Listbox.Button>
           <Listbox.Options className="border-2 rounded-2xl border-extraColor p-2 bg-secondColor w-1/3 z-10" >
             {option.map((person) => (
               <Listbox.Option className="group w-full hover:bg-atentionColor rounded-3xl p-3 flex flex-row justify-between items-center cursor-pointer"
@@ -28,7 +27,7 @@ function Advice() {
                 value={person}
                 disabled={person.unavailable}
               >
-                <p className="w-full text-center group-hover:animate-bounce items-center">{person.name}</p> <ArrowCircleLeftIcon className="w-8 opacity-0 group-hover:opacity-100 text-secondColor hover:animate-pulse"/>
+                <p className="w-full text-center group-hover:animate-bounce items-center">{person.name}</p> {/*<ArrowCircleLeftIcon className="w-8 opacity-0 group-hover:opacity-100 text-secondColor hover:animate-pulse"/>*/}
               </Listbox.Option>
             ))}
           </Listbox.Options>
