@@ -42,7 +42,9 @@ function Advice() {
           <div className="rounded-2xl w-full  flex flex-row flex-wrap justify-between items-center h-0 overflow-hidden duration-300" id="divList">
             {option.map((person) => (
               <div className="relative w-full border-textColor h-10 overflow-hidden group m-2 hover:border-extraColor border-2 rounded-2xl"
-                onClick={changeOpen}>
+                onClick={changeOpen}
+                key={person.id}
+                >
                 <input className="absolute top-0 left-0 opacity-0 h-screen w-screen z-50 cursor-pointer"
                   key={person.id}
                   value={person.id}
