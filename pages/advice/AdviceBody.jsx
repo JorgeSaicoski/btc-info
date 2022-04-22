@@ -3,11 +3,10 @@ import React from 'react'
 function AdviceBody({id}) {
 
   return (
-    <div>
-      <h2 className="text-center rounded-b-full text-3xl bg-extraColor text-textColor mb-1">{id.name}</h2>
-      <div className="bg-principalColor sticky top-[15%] h-2 m-10 rounded-full"></div>
+    <div className="bg-extraColor p-10 rounded-2xl">
+      <h2 className="text-center rounded-full text-3xl bg-principalColor text-textColor mb-1">{id.name}</h2>
       {
-        (id.id === 1) ?
+        (id.id === 0) ?
         <div className="p-10 m-10 rounded-2xl bg-secondColor min-h-screen flex flex-col justify-around border-2 border-extraColor">
           <p className="hover:bg-atentionColor p-2 rounded">For any investiment you must to know that it have risk.</p>
           <p className="hover:bg-atentionColor p-2 rounded">Anything that you do have a risk. May the company that you bought a stock break. May the country that you invest (tesoury or anything) print a lot of money and your investiment will lost the value.</p>
@@ -17,10 +16,10 @@ function AdviceBody({id}) {
           <p className="hover:bg-atentionColor p-2 rounded">Just do a quicly investiment when you will put a  little amount.</p>
         </div>
         :
-        (id.id === 2) ?
-        <p></p>
+        (id.id === 1) ?
+        <div></div>
         :
-        <p></p>
+        <div></div>
       }
     </div>
   )
